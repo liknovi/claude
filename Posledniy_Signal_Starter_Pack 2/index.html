@@ -1,0 +1,12 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Последний сигнал</title><link rel="stylesheet" href="styles.css"></head><body><main id="app">
+<section id="menu" class="screen"><h1>ПОСЛЕДНИЙ СИГНАЛ</h1><p>История о выживании, тайнах и чувствах.</p>
+<button id="start">Новая игра</button><button id="continue">Продолжить</button><button data-go="chapters">Главы</button><button data-go="gallery">Галерея</button><button data-go="chars">Персонажи</button><button data-go="settings">Настройки</button></section>
+<section id="chapters" class="screen panel" hidden><h2>Главы</h2><div id="chlist"></div><button data-go="menu">Назад</button></section>
+<section id="gallery" class="screen panel" hidden><h2>Галерея локаций</h2><div id="glist" class="grid"></div><button data-go="menu">Назад</button></section>
+<section id="chars" class="screen panel" hidden><h2>Персонажи</h2><div id="clist" class="grid"></div><button data-go="menu">Назад</button></section>
+<section id="settings" class="screen panel" hidden><h2>Настройки</h2><label>Музыка <input id="vm" type="range" min="0" max="100"></label><label>Звуковые эффекты <input id="vs" type="range" min="0" max="100"></label><label>Скорость текста <input id="vt" type="range" min="0" max="3" step="1"></label><button id="reset">Стереть все сохранения</button><button data-go="menu">Назад</button></section>
+<section id="game" class="screen" hidden><div id="scene"><img id="bg" alt=""><div id="sprite"></div><div id="hud"></div><div id="top"><button id="skip">Пропуск: выкл.</button><button id="hist">История</button><button id="save">Сохранить</button><button id="home">Меню</button></div></div>
+<div class="dialog" id="dlg"><b id="speaker"></b><p id="line"></p><div id="choices"></div></div></section>
+<section id="ending" class="screen panel" hidden><h2 id="etitle"></h2><div id="etext"></div><button id="again">В главное меню</button></section>
+<div id="modal" hidden><div><pre id="mtext"></pre><button id="mclose">Закрыть</button></div></div>
+</main><script src="src/story.js"></script><script src="src/story_ch12.js"></script><script src="src/story_ch34.js"></script><script src="src/state.js"></script><script src="src/engine.js"></script></body></html>
